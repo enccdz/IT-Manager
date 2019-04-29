@@ -1,0 +1,365 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{4F86D3E9-0BE9-490C-8F28-3D0BE4E31AA7}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>IT_Manager_ENCC</RootNamespace>
+    <AssemblyName>IT Manager ENCC</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DevExpress.BonusSkins.v18.2" />
+    <Reference Include="DevExpress.Data.v18.2" />
+    <Reference Include="DevExpress.Dialogs.v18.2.Core, Version=18.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Printing.v18.2.Core" />
+    <Reference Include="DevExpress.Utils.v18.2" />
+    <Reference Include="DevExpress.XtraBars.v18.2" />
+    <Reference Include="DevExpress.Sparkline.v18.2.Core" />
+    <Reference Include="DevExpress.XtraDialogs.v18.2, Version=18.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraEditors.v18.2" />
+    <Reference Include="DevExpress.XtraGrid.v18.2, Version=18.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraLayout.v18.2, Version=18.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraPrinting.v18.2, Version=18.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraTreeList.v18.2, Version=18.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="MySql.Data, Version=8.0.15.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Beings\HardwareState.cs" />
+    <Compile Include="Beings\HardwareType.cs" />
+    <Compile Include="Beings\User.cs" />
+    <Compile Include="Forms\Park\hardwareSearch.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Park\hardwareSearch.Designer.cs">
+      <DependentUpon>hardwareSearch.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Park\reportsRepairs.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Park\reportsRepairs.Designer.cs">
+      <DependentUpon>reportsRepairs.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\SQL\backupDatabase.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\SQL\backupDatabase.Designer.cs">
+      <DependentUpon>backupDatabase.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\SQL\connectionChangeServer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\SQL\connectionChangeServer.Designer.cs">
+      <DependentUpon>connectionChangeServer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Park\hardwareList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Park\hardwareList.Designer.cs">
+      <DependentUpon>hardwareList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Park\hardwareMovement.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Park\hardwareMovement.Designer.cs">
+      <DependentUpon>hardwareMovement.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Park\hardwareNew.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Park\hardwareNew.Designer.cs">
+      <DependentUpon>hardwareNew.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\SQL\insertionsNewDbExisting.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\SQL\insertionsNewDbExisting.Designer.cs">
+      <DependentUpon>insertionsNewDbExisting.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\SQL\insertionsNewDbFromFile.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\SQL\insertionsNewDbFromFile.Designer.cs">
+      <DependentUpon>insertionsNewDbFromFile.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\SQL\resetsAddAuthentification.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\SQL\resetsAddAuthentification.Designer.cs">
+      <DependentUpon>resetsAddAuthentification.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\SQL\resetsRemoveAuthentification.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\SQL\resetsRemoveAuthentification.Designer.cs">
+      <DependentUpon>resetsRemoveAuthentification.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\SQL\resetsResetPermitions.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\SQL\resetsResetPermitions.Designer.cs">
+      <DependentUpon>resetsResetPermitions.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\SQL\usersAddUser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\SQL\usersAddUser.Designer.cs">
+      <DependentUpon>usersAddUser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\SQL\usersRemoveUser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\SQL\usersRemoveUser.Designer.cs">
+      <DependentUpon>usersRemoveUser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Ticket\reportAdminRepairs.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Ticket\reportAdminRepairs.Designer.cs">
+      <DependentUpon>reportAdminRepairs.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Ticket\settingAdmins.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Ticket\settingAdmins.Designer.cs">
+      <DependentUpon>settingAdmins.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Ticket\ticketDaily.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Ticket\ticketDaily.Designer.cs">
+      <DependentUpon>ticketDaily.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Ticket\ticketNew.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Ticket\ticketNew.Designer.cs">
+      <DependentUpon>ticketNew.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Ticket\ticketSearch.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Ticket\ticketSearch.Designer.cs">
+      <DependentUpon>ticketSearch.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Ticket\settingUsers.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Ticket\settingUsers.Designer.cs">
+      <DependentUpon>settingUsers.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Ticket\reportUsersTickets.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Ticket\reportUsersTickets.Designer.cs">
+      <DependentUpon>reportUsersTickets.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainForm.Designer.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\MYSQLConnect.cs" />
+    <Compile Include="Modules\SqlTools.cs" />
+    <Compile Include="Modules\Tools.cs" />
+    <Compile Include="Modules\UiTools.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Forms\Park\hardwareList.resx">
+      <DependentUpon>hardwareList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Park\hardwareMovement.resx">
+      <DependentUpon>hardwareMovement.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Park\hardwareNew.resx">
+      <DependentUpon>hardwareNew.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Park\hardwareSearch.resx">
+      <DependentUpon>hardwareSearch.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Park\reportsRepairs.resx">
+      <DependentUpon>reportsRepairs.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\SQL\backupDatabase.resx">
+      <DependentUpon>backupDatabase.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\SQL\connectionChangeServer.resx">
+      <DependentUpon>connectionChangeServer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\SQL\insertionsNewDbExisting.resx">
+      <DependentUpon>insertionsNewDbExisting.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\SQL\insertionsNewDbFromFile.resx">
+      <DependentUpon>insertionsNewDbFromFile.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\SQL\resetsAddAuthentification.resx">
+      <DependentUpon>resetsAddAuthentification.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\SQL\resetsRemoveAuthentification.resx">
+      <DependentUpon>resetsRemoveAuthentification.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\SQL\resetsResetPermitions.resx">
+      <DependentUpon>resetsResetPermitions.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\SQL\usersAddUser.resx">
+      <DependentUpon>usersAddUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\SQL\usersRemoveUser.resx">
+      <DependentUpon>usersRemoveUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Ticket\reportAdminRepairs.resx">
+      <DependentUpon>reportAdminRepairs.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Ticket\settingAdmins.resx">
+      <DependentUpon>settingAdmins.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Ticket\ticketDaily.resx">
+      <DependentUpon>ticketDaily.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Ticket\ticketNew.resx">
+      <DependentUpon>ticketNew.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Ticket\ticketSearch.resx">
+      <DependentUpon>ticketSearch.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Ticket\settingUsers.resx">
+      <DependentUpon>settingUsers.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Ticket\reportUsersTickets.resx">
+      <DependentUpon>reportUsersTickets.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainForm.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logo encc.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\people_security_agent.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user_group.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ticket-new.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ticket-delay.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\search.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ticket-team.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ticket-properties.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\laptop2-new.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\laptop2-list.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\laptop2-find.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\laptop2-import.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\laptop2-warn.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\database_access.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\database-attach.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\database-add.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\database-user.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\database-remove.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\access_code-delete.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\access_code-ok.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\padlock-database.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logo encc.jpg" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
