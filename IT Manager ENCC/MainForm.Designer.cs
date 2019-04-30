@@ -52,6 +52,9 @@
             this.barButtonItem20 = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem21 = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem17 = new DevExpress.XtraBars.BarButtonItem();
+            this.barButtonItem22 = new DevExpress.XtraBars.BarButtonItem();
+            this.barButtonItem23 = new DevExpress.XtraBars.BarButtonItem();
+            this.barButtonItem25 = new DevExpress.XtraBars.BarButtonItem();
             this.ribbonPage1 = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPageGroup1 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPageGroup5 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
@@ -65,15 +68,11 @@
             this.ribbonPageGroup7 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPageGroup8 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPageGroup10 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
-            this.adornerUIManager1 = new DevExpress.Utils.VisualEffects.AdornerUIManager(this.components);
-            this.badge1 = new DevExpress.Utils.VisualEffects.Badge();
             this.ribbonPage4 = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPageGroup11 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
-            this.barButtonItem22 = new DevExpress.XtraBars.BarButtonItem();
-            this.barButtonItem23 = new DevExpress.XtraBars.BarButtonItem();
             this.ribbonPageGroup12 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
-            this.barButtonItem24 = new DevExpress.XtraBars.BarButtonItem();
-            this.barButtonItem25 = new DevExpress.XtraBars.BarButtonItem();
+            this.adornerUIManager1 = new DevExpress.Utils.VisualEffects.AdornerUIManager(this.components);
+            this.badge1 = new DevExpress.Utils.VisualEffects.Badge();
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.adornerUIManager1)).BeginInit();
             this.SuspendLayout();
@@ -106,7 +105,6 @@
             this.barButtonItem17,
             this.barButtonItem22,
             this.barButtonItem23,
-            this.barButtonItem24,
             this.barButtonItem25});
             this.ribbonControl1.Location = new System.Drawing.Point(0, 0);
             this.ribbonControl1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
@@ -308,6 +306,31 @@
             this.barButtonItem17.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large;
             this.barButtonItem17.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem17_ItemClick);
             // 
+            // barButtonItem22
+            // 
+            this.barButtonItem22.Caption = "NewUser";
+            this.barButtonItem22.Id = 25;
+            this.barButtonItem22.ImageOptions.Image = global::IT_Manager_ENCC.Properties.Resources.people_security_agent;
+            this.barButtonItem22.Name = "barButtonItem22";
+            this.barButtonItem22.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large;
+            // 
+            // barButtonItem23
+            // 
+            this.barButtonItem23.Caption = "UserList";
+            this.barButtonItem23.Id = 26;
+            this.barButtonItem23.ImageOptions.Image = global::IT_Manager_ENCC.Properties.Resources.user_group;
+            this.barButtonItem23.Name = "barButtonItem23";
+            this.barButtonItem23.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large;
+            // 
+            // barButtonItem25
+            // 
+            this.barButtonItem25.Caption = "Email list";
+            this.barButtonItem25.Id = 28;
+            this.barButtonItem25.ImageOptions.Image = global::IT_Manager_ENCC.Properties.Resources.ticket_team;
+            this.barButtonItem25.Name = "barButtonItem25";
+            this.barButtonItem25.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large;
+            this.barButtonItem25.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem25_ItemClick);
+            // 
             // ribbonPage1
             // 
             this.ribbonPage1.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
@@ -407,6 +430,27 @@
             this.ribbonPageGroup10.Name = "ribbonPageGroup10";
             this.ribbonPageGroup10.Text = "Backup";
             // 
+            // ribbonPage4
+            // 
+            this.ribbonPage4.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
+            this.ribbonPageGroup11,
+            this.ribbonPageGroup12});
+            this.ribbonPage4.Name = "ribbonPage4";
+            this.ribbonPage4.Text = "Password Management";
+            // 
+            // ribbonPageGroup11
+            // 
+            this.ribbonPageGroup11.ItemLinks.Add(this.barButtonItem22);
+            this.ribbonPageGroup11.ItemLinks.Add(this.barButtonItem23);
+            this.ribbonPageGroup11.Name = "ribbonPageGroup11";
+            this.ribbonPageGroup11.Text = "userSettings";
+            // 
+            // ribbonPageGroup12
+            // 
+            this.ribbonPageGroup12.ItemLinks.Add(this.barButtonItem25);
+            this.ribbonPageGroup12.Name = "ribbonPageGroup12";
+            this.ribbonPageGroup12.Text = "External email settings";
+            // 
             // adornerUIManager1
             // 
             this.adornerUIManager1.Elements.Add(this.badge1);
@@ -426,60 +470,6 @@
             this.badge1.Properties.TextMargin = new System.Windows.Forms.Padding(0);
             this.badge1.TargetElement = this.barButtonItem4;
             this.badge1.TargetElementRegion = DevExpress.Utils.VisualEffects.TargetElementRegion.Control;
-            // 
-            // ribbonPage4
-            // 
-            this.ribbonPage4.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
-            this.ribbonPageGroup11,
-            this.ribbonPageGroup12});
-            this.ribbonPage4.Name = "ribbonPage4";
-            this.ribbonPage4.Text = "Password Management";
-            // 
-            // ribbonPageGroup11
-            // 
-            this.ribbonPageGroup11.ItemLinks.Add(this.barButtonItem22);
-            this.ribbonPageGroup11.ItemLinks.Add(this.barButtonItem23);
-            this.ribbonPageGroup11.Name = "ribbonPageGroup11";
-            this.ribbonPageGroup11.Text = "userSettings";
-            // 
-            // barButtonItem22
-            // 
-            this.barButtonItem22.Caption = "NewUser";
-            this.barButtonItem22.Id = 25;
-            this.barButtonItem22.ImageOptions.Image = global::IT_Manager_ENCC.Properties.Resources.people_security_agent;
-            this.barButtonItem22.Name = "barButtonItem22";
-            this.barButtonItem22.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large;
-            // 
-            // barButtonItem23
-            // 
-            this.barButtonItem23.Caption = "UserList";
-            this.barButtonItem23.Id = 26;
-            this.barButtonItem23.ImageOptions.Image = global::IT_Manager_ENCC.Properties.Resources.user_group;
-            this.barButtonItem23.Name = "barButtonItem23";
-            this.barButtonItem23.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large;
-            // 
-            // ribbonPageGroup12
-            // 
-            this.ribbonPageGroup12.ItemLinks.Add(this.barButtonItem24);
-            this.ribbonPageGroup12.ItemLinks.Add(this.barButtonItem25);
-            this.ribbonPageGroup12.Name = "ribbonPageGroup12";
-            this.ribbonPageGroup12.Text = "External email settings";
-            // 
-            // barButtonItem24
-            // 
-            this.barButtonItem24.Caption = "New email";
-            this.barButtonItem24.Id = 27;
-            this.barButtonItem24.ImageOptions.Image = global::IT_Manager_ENCC.Properties.Resources.ticket_new;
-            this.barButtonItem24.Name = "barButtonItem24";
-            this.barButtonItem24.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large;
-            // 
-            // barButtonItem25
-            // 
-            this.barButtonItem25.Caption = "Email list";
-            this.barButtonItem25.Id = 28;
-            this.barButtonItem25.ImageOptions.Image = global::IT_Manager_ENCC.Properties.Resources.ticket_team;
-            this.barButtonItem25.Name = "barButtonItem25";
-            this.barButtonItem25.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large;
             // 
             // MainForm
             // 
@@ -550,7 +540,6 @@
         private DevExpress.XtraBars.Ribbon.RibbonPage ribbonPage4;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup11;
         private DevExpress.XtraBars.BarButtonItem barButtonItem23;
-        private DevExpress.XtraBars.BarButtonItem barButtonItem24;
         private DevExpress.XtraBars.BarButtonItem barButtonItem25;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup12;
     }

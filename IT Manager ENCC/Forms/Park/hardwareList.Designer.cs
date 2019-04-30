@@ -81,7 +81,7 @@
             this.splitContainerControl1.Panel2.Controls.Add(this.hardwareGrid);
             this.splitContainerControl1.Panel2.Text = "Panel2";
             this.splitContainerControl1.Size = new System.Drawing.Size(737, 439);
-            this.splitContainerControl1.SplitterPosition = 189;
+            this.splitContainerControl1.SplitterPosition = 190;
             this.splitContainerControl1.TabIndex = 0;
             // 
             // hardwareFormContainer
@@ -106,7 +106,7 @@
             this.hardwareFormContainer.Dock = System.Windows.Forms.DockStyle.Fill;
             this.hardwareFormContainer.Location = new System.Drawing.Point(0, 0);
             this.hardwareFormContainer.Name = "hardwareFormContainer";
-            this.hardwareFormContainer.Size = new System.Drawing.Size(737, 189);
+            this.hardwareFormContainer.Size = new System.Drawing.Size(737, 190);
             this.hardwareFormContainer.TabIndex = 2;
             this.hardwareFormContainer.Text = "Hardware list";
             // 
@@ -261,7 +261,7 @@
             this.hardwareGrid.Location = new System.Drawing.Point(0, 0);
             this.hardwareGrid.MainView = this.gridView1;
             this.hardwareGrid.Name = "hardwareGrid";
-            this.hardwareGrid.Size = new System.Drawing.Size(737, 244);
+            this.hardwareGrid.Size = new System.Drawing.Size(737, 243);
             this.hardwareGrid.TabIndex = 1;
             this.hardwareGrid.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});

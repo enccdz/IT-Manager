@@ -1,6 +1,7 @@
 ﻿using IT_Manager_ENCC.Beings;
 using IT_Manager_ENCC.Forms;
 using IT_Manager_ENCC.Forms.Park;
+using IT_Manager_ENCC.Forms.Pass;
 using IT_Manager_ENCC.Forms.SQL;
 using System;
 using System.Collections.Generic;
@@ -32,6 +33,8 @@ namespace IT_Manager_ENCC
         private resetsAddAuthentification AddAuthentificationForm;
         private resetsResetPermitions ResetPermitionsForm;
         private backupDatabase BackupDatabaseForm;
+        private externalEmailList externalEmailListForm;
+        private externalEmailAdd externalEmailAddForm;
 
         public int num = 0;        
         public List<User> userList = new List<User>();
@@ -254,6 +257,13 @@ namespace IT_Manager_ENCC
             BackupDatabaseForm = new backupDatabase();
             //BackupDatabaseForm.MdiParent = this;
             BackupDatabaseForm.ShowDialog();
+        }
+
+        private void barButtonItem25_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            externalEmailListForm = new externalEmailList();
+            externalEmailListForm.MdiParent = this;
+            externalEmailListForm.Show();
         }
     }
 }
