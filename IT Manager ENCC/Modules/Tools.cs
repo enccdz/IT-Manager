@@ -1,6 +1,8 @@
 ﻿using IT_Manager_ENCC.Beings;
 using System;
 using System.Collections.Generic;
+using System.Net.Mail;
+using System.ComponentModel.DataAnnotations;
 
 namespace IT_Manager_ENCC.Modules
 {
@@ -46,5 +48,22 @@ namespace IT_Manager_ENCC.Modules
             return "--";
         }
 
+
+        public static String GeneratePassword(String PasswordCharacters,int size)
+        {
+            Random random = new Random();
+            String GeneratedPassword = "";
+            for (int i = 0; i< size; i++)
+            {
+                GeneratedPassword += PasswordCharacters[random.Next(PasswordCharacters.Length)];
+            }
+
+            return GeneratedPassword;
+        }
+
+        public static bool IsEmailValid(string emailaddress)
+        {
+            return new EmailAddressAttribute().IsValid(emailaddress);
+        }
     }
 }

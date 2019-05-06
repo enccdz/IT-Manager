@@ -41,6 +41,8 @@ namespace IT_Manager_ENCC
         public List<HardwareType> hardwareTypeList = new List<HardwareType>();
         public List<HardwareState> hardwareStateList = new List<HardwareState>();
 
+        public string PasswordCharacters = "abcdefghijklmnopqrstuvwxyz0123456789";
+
 
         public MainForm()
         {
@@ -261,7 +263,7 @@ namespace IT_Manager_ENCC
 
         private void barButtonItem25_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            externalEmailListForm = new externalEmailList();
+            externalEmailListForm = new externalEmailList(this);
             externalEmailListForm.MdiParent = this;
             externalEmailListForm.Show();
         }

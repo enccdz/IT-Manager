@@ -29,12 +29,12 @@
         private void InitializeComponent()
         {
             this.hardwareFormContainer = new DevExpress.XtraEditors.GroupControl();
+            this.generatePasswordBtn = new DevExpress.XtraEditors.SimpleButton();
             this.emailTxt = new DevExpress.XtraEditors.TextEdit();
             this.passwordTxt = new DevExpress.XtraEditors.TextEdit();
             this.label6 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.confirmBtn = new DevExpress.XtraEditors.SimpleButton();
-            this.generatePasswordBtn = new DevExpress.XtraEditors.SimpleButton();
             ((System.ComponentModel.ISupportInitialize)(this.hardwareFormContainer)).BeginInit();
             this.hardwareFormContainer.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.emailTxt.Properties)).BeginInit();
@@ -55,6 +55,15 @@
             this.hardwareFormContainer.Size = new System.Drawing.Size(404, 141);
             this.hardwareFormContainer.TabIndex = 3;
             this.hardwareFormContainer.Text = "Add external email ";
+            // 
+            // generatePasswordBtn
+            // 
+            this.generatePasswordBtn.Location = new System.Drawing.Point(324, 69);
+            this.generatePasswordBtn.Name = "generatePasswordBtn";
+            this.generatePasswordBtn.Size = new System.Drawing.Size(68, 25);
+            this.generatePasswordBtn.TabIndex = 69;
+            this.generatePasswordBtn.Text = "Generate";
+            this.generatePasswordBtn.Click += new System.EventHandler(this.generatePasswordBtn_Click);
             // 
             // emailTxt
             // 
@@ -95,14 +104,7 @@
             this.confirmBtn.Size = new System.Drawing.Size(111, 25);
             this.confirmBtn.TabIndex = 68;
             this.confirmBtn.Text = "Add Email";
-            // 
-            // generatePasswordBtn
-            // 
-            this.generatePasswordBtn.Location = new System.Drawing.Point(324, 69);
-            this.generatePasswordBtn.Name = "generatePasswordBtn";
-            this.generatePasswordBtn.Size = new System.Drawing.Size(68, 25);
-            this.generatePasswordBtn.TabIndex = 69;
-            this.generatePasswordBtn.Text = "Generate";
+            this.confirmBtn.Click += new System.EventHandler(this.confirmBtn_Click);
             // 
             // externalEmailAdd
             // 

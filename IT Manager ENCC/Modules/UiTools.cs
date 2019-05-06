@@ -84,5 +84,30 @@ namespace IT_Manager_ENCC.Modules
             }
         }
 
+        public static void FillEmailDataGrid(MySqlDataReader myDR, DataTable table, GridControl grid, MainForm mainForm)
+        {
+            if (myDR.HasRows)
+            {
+                while (myDR.Read())
+                {
+                    DataRow tr = table.NewRow();
+
+                    tr[0] = myDR.GetString(0);
+                    tr[1] = myDR.GetString(1);
+                    tr[2] = myDR.GetString(2);
+                    tr[3] = myDR.GetString(3);
+
+                    for (int i = 3; i < table.Columns.Count; i++)
+                    {
+                        tr[i] = myDR.GetString(i);
+                    }
+
+                    table.Rows.Add(tr);
+                }
+
+                grid.DataSource = table;
+            }
+        }
+
     }
 }
