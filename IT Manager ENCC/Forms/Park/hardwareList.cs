@@ -168,8 +168,6 @@ namespace IT_Manager_ENCC.Forms
             {
                 EditHardware(focussedUserId);
             }
-
-
         }
     }
 }
