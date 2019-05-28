@@ -108,10 +108,7 @@ namespace IT_Manager_ENCC.Forms
         
 
 
-
-
-
-
+        
 
         // User input -----------------
 
@@ -167,7 +164,7 @@ namespace IT_Manager_ENCC.Forms
             else
             {
                 EditHardware(focussedUserId);
-            }
+            } 
         }
     }
 }

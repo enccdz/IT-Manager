@@ -10,7 +10,8 @@ namespace IT_Manager_ENCC.Modules
         public static MySqlConnection myConn = new MySqlConnection();
         public static MySqlCommand myCmd = new MySqlCommand();
         public static MySqlDataReader myDR;
-        public static string serveur, instance, username, password, constring;
+        public static string instance, username, password, constring;
+        public static string serveur = "192.168.0.3";
         public static string DATABASE_NAME = "itmanagerdb";
         public static int user_id = 0;
 
@@ -28,7 +29,7 @@ namespace IT_Manager_ENCC.Modules
                 // If con <> "" Then
                 // myConn.ConnectionString = con
                 // Else
-                constring = "Server=localhost;Database=" + DATABASE_NAME + ";Uid=root;Pwd=";
+                constring = "Server=" + serveur + ";Database=" + DATABASE_NAME + ";Uid=user;Pwd=123456";
                 myConn.ConnectionString = constring;
                 // End If
                 Console.WriteLine(strQry);
